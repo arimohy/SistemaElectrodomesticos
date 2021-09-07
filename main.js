@@ -255,7 +255,9 @@ boton2.addEventListener("click",(event) => {
 const boton3=document.getElementById('boton3')
 boton3.addEventListener("click",(event) => {
     inv.reducirInventario(fac)
+    console.log(inv)
     fac=new Factura();
+    console.log(fac)
     tabla2.innerHTML = "";
     fac.listaFactura.forEach(element => {
         console.log(element)

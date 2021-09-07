@@ -18,15 +18,19 @@ export class Inventario{
             //console.log(li.electrodomestico)
             this.listaInventario.forEach(element => {
                 //if(element[electrodomestico]==
-                //console.log(element.electrodomestico)
-                if(li.electrodomestico===element.electrodomestico && element.cantidad>0){
-                    //console.log("es igual")
+                console.log(li.electrodomestico.leer())
+                console.log(element.electrodomestico.leer())
+                if(li.electrodomestico.leer()===element.electrodomestico.leer()){
+                    console.log("si es igual")
                     if(element.cantidad-li.cantidad>=0){
                         element.cantidad=element.cantidad-li.cantidad;
                     }
                     else{
-                        console.log("No se puede agregar por que no hay stock suficiente")
+                        window.alert("No se pudo procesar factura por que contiene ** "+li.electrodomestico.leer()+"** y este no se tiene en inventario,revice el inventario y vuelta a rellenar la factura gracias");
                     }
+                }
+                else{
+                    console.log("no son iguales")
                 }
             });
         });
