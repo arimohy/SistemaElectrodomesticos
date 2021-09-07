@@ -19,9 +19,14 @@ export class Inventario{
             this.listaInventario.forEach(element => {
                 //if(element[electrodomestico]==
                 //console.log(element.electrodomestico)
-                if(li.electrodomestico===element.electrodomestico){
+                if(li.electrodomestico===element.electrodomestico && element.cantidad>0){
                     //console.log("es igual")
-                    element.cantidad=element.cantidad-li.cantidad;
+                    if(element.cantidad-li.cantidad>=0){
+                        element.cantidad=element.cantidad-li.cantidad;
+                    }
+                    else{
+                        console.log("No se puede agregar por que no hay stock suficiente")
+                    }
                 }
             });
         });

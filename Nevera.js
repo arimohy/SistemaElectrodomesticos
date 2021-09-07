@@ -16,4 +16,7 @@ export class Nevera extends Electrodomestico{
     preciofinal(){
         return super.calcPrecioBase()+this.getincreCapacidad()
     }
+    leer(){
+        return super.leer()+", capacidad: "+this.capacidad
+    }
 }

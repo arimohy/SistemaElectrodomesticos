@@ -27,4 +27,7 @@ export class Televisor extends Electrodomestico{
     preciofinal(){
         return super.calcPrecioBase()+this.getincreTamaño()+this.getincreSintonizador()
     }
+    leer(){
+        return super.leer()+", tamaño: "+this.tamaño+", tiene sintoniador: "+this.sintonidorTDT
+    }
 }

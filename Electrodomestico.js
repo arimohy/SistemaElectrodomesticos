@@ -31,4 +31,7 @@ export class Electrodomestico{
     preciofinal(){
         return this.calcPrecioBase()
     }
+    leer(){
+        return "consumo: "+this.consumo+", procedencia:"+this.procedencia
+    }
 }
